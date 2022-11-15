@@ -42,8 +42,8 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.mrcRepIngresados = new System.Windows.Forms.GroupBox();
-            this.lstDatos = new System.Windows.Forms.ListBox();
             this.cmbMarca1 = new System.Windows.Forms.ComboBox();
+            this.lstDatos = new System.Windows.Forms.ListBox();
             this.lblDatos = new System.Windows.Forms.Label();
             this.mrcOrigen1 = new System.Windows.Forms.GroupBox();
             this.optImportado1 = new System.Windows.Forms.RadioButton();
@@ -52,6 +52,7 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.mrcDatosRep.SuspendLayout();
             this.mrcOrigen.SuspendLayout();
             this.mrcRepIngresados.SuspendLayout();
@@ -69,6 +70,7 @@
             this.mrcDatosRep.Controls.Add(this.lblPrecio);
             this.mrcDatosRep.Controls.Add(this.lblNumero);
             this.mrcDatosRep.Controls.Add(this.lblMarca);
+            this.mrcDatosRep.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcDatosRep.Location = new System.Drawing.Point(21, 32);
             this.mrcDatosRep.Margin = new System.Windows.Forms.Padding(4);
             this.mrcDatosRep.Name = "mrcDatosRep";
@@ -81,6 +83,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(155, 164);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.MaxLength = 50;
@@ -88,10 +91,12 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(485, 101);
             this.txtDescripcion.TabIndex = 10;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // cmbMarca
             // 
             this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Items.AddRange(new object[] {
             "Peugeot",
@@ -100,7 +105,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(111, 32);
             this.cmbMarca.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(123, 24);
+            this.cmbMarca.Size = new System.Drawing.Size(123, 30);
             this.cmbMarca.TabIndex = 9;
             this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
@@ -108,11 +113,11 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Enabled = false;
-            this.lblDescripcion.Font = new System.Drawing.Font("Modern No. 20", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(31, 203);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(101, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(103, 22);
             this.lblDescripcion.TabIndex = 8;
             this.lblDescripcion.Text = "Descripcion";
             // 
@@ -121,7 +126,7 @@
             this.mrcOrigen.BackColor = System.Drawing.Color.Transparent;
             this.mrcOrigen.Controls.Add(this.optImportado);
             this.mrcOrigen.Controls.Add(this.optNacional);
-            this.mrcOrigen.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcOrigen.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcOrigen.Location = new System.Drawing.Point(35, 71);
             this.mrcOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.mrcOrigen.Name = "mrcOrigen";
@@ -134,11 +139,11 @@
             // optImportado
             // 
             this.optImportado.AutoSize = true;
-            this.optImportado.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optImportado.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optImportado.Location = new System.Drawing.Point(16, 58);
             this.optImportado.Margin = new System.Windows.Forms.Padding(4);
             this.optImportado.Name = "optImportado";
-            this.optImportado.Size = new System.Drawing.Size(102, 24);
+            this.optImportado.Size = new System.Drawing.Size(112, 26);
             this.optImportado.TabIndex = 4;
             this.optImportado.Text = "Importado";
             this.optImportado.UseVisualStyleBackColor = true;
@@ -147,11 +152,11 @@
             // 
             this.optNacional.AutoSize = true;
             this.optNacional.Checked = true;
-            this.optNacional.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optNacional.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optNacional.Location = new System.Drawing.Point(17, 30);
             this.optNacional.Margin = new System.Windows.Forms.Padding(4);
             this.optNacional.Name = "optNacional";
-            this.optNacional.Size = new System.Drawing.Size(92, 24);
+            this.optNacional.Size = new System.Drawing.Size(98, 26);
             this.optNacional.TabIndex = 3;
             this.optNacional.TabStop = true;
             this.optNacional.Text = "Nacional";
@@ -160,35 +165,38 @@
             // txtPrecio
             // 
             this.txtPrecio.Enabled = false;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(473, 105);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.MaxLength = 10000;
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(123, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(123, 30);
             this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtNumero
             // 
             this.txtNumero.Enabled = false;
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(473, 36);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(123, 22);
+            this.txtNumero.Size = new System.Drawing.Size(123, 30);
             this.txtNumero.TabIndex = 8;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNmero_TextChanged);
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNmero_KeyPress);
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Enabled = false;
-            this.lblPrecio.Font = new System.Drawing.Font("Modern No. 20", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(400, 111);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(60, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(59, 22);
             this.lblPrecio.TabIndex = 3;
             this.lblPrecio.Text = "Precio";
             // 
@@ -196,33 +204,33 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Enabled = false;
-            this.lblNumero.Font = new System.Drawing.Font("Modern No. 20", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.Location = new System.Drawing.Point(394, 36);
             this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(71, 20);
+            this.lblNumero.Size = new System.Drawing.Size(75, 22);
             this.lblNumero.TabIndex = 1;
             this.lblNumero.Text = "Numero";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Modern No. 20", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.Location = new System.Drawing.Point(31, 36);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(59, 20);
+            this.lblMarca.Size = new System.Drawing.Size(59, 22);
             this.lblMarca.TabIndex = 0;
             this.lblMarca.Text = "Marca";
             // 
             // mrcRepIngresados
             // 
-            this.mrcRepIngresados.Controls.Add(this.lstDatos);
             this.mrcRepIngresados.Controls.Add(this.cmbMarca1);
+            this.mrcRepIngresados.Controls.Add(this.lstDatos);
             this.mrcRepIngresados.Controls.Add(this.lblDatos);
             this.mrcRepIngresados.Controls.Add(this.mrcOrigen1);
             this.mrcRepIngresados.Controls.Add(this.lblMarca1);
-            this.mrcRepIngresados.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcRepIngresados.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcRepIngresados.Location = new System.Drawing.Point(21, 321);
             this.mrcRepIngresados.Margin = new System.Windows.Forms.Padding(4);
             this.mrcRepIngresados.Name = "mrcRepIngresados";
@@ -232,38 +240,39 @@
             this.mrcRepIngresados.TabStop = false;
             this.mrcRepIngresados.Text = "Repuestos Ingresados";
             // 
-            // lstDatos
-            // 
-            this.lstDatos.FormattingEnabled = true;
-            this.lstDatos.ItemHeight = 20;
-            this.lstDatos.Location = new System.Drawing.Point(270, 62);
-            this.lstDatos.Name = "lstDatos";
-            this.lstDatos.Size = new System.Drawing.Size(406, 204);
-            this.lstDatos.TabIndex = 10;
-            // 
             // cmbMarca1
             // 
             this.cmbMarca1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMarca1.FormattingEnabled = true;
             this.cmbMarca1.Items.AddRange(new object[] {
             "Peugeot",
             "Fiat",
             "Renault"});
-            this.cmbMarca1.Location = new System.Drawing.Point(111, 39);
-            this.cmbMarca1.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbMarca1.Location = new System.Drawing.Point(101, 36);
             this.cmbMarca1.Name = "cmbMarca1";
-            this.cmbMarca1.Size = new System.Drawing.Size(123, 28);
-            this.cmbMarca1.TabIndex = 9;
-            this.cmbMarca1.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
+            this.cmbMarca1.Size = new System.Drawing.Size(120, 30);
+            this.cmbMarca1.TabIndex = 11;
+            this.cmbMarca1.SelectedIndexChanged += new System.EventHandler(this.cmbMarca1_SelectedIndexChanged);
+            // 
+            // lstDatos
+            // 
+            this.lstDatos.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDatos.FormattingEnabled = true;
+            this.lstDatos.ItemHeight = 22;
+            this.lstDatos.Location = new System.Drawing.Point(270, 62);
+            this.lstDatos.Name = "lstDatos";
+            this.lstDatos.Size = new System.Drawing.Size(406, 202);
+            this.lstDatos.TabIndex = 10;
             // 
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Font = new System.Drawing.Font("Modern No. 20", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatos.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatos.Location = new System.Drawing.Point(275, 39);
             this.lblDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(159, 20);
+            this.lblDatos.Size = new System.Drawing.Size(167, 22);
             this.lblDatos.TabIndex = 9;
             this.lblDatos.Text = "Datos de Repuestos";
             // 
@@ -272,7 +281,7 @@
             this.mrcOrigen1.BackColor = System.Drawing.Color.Transparent;
             this.mrcOrigen1.Controls.Add(this.optImportado1);
             this.mrcOrigen1.Controls.Add(this.optNacional1);
-            this.mrcOrigen1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mrcOrigen1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcOrigen1.Location = new System.Drawing.Point(29, 81);
             this.mrcOrigen1.Margin = new System.Windows.Forms.Padding(4);
             this.mrcOrigen1.Name = "mrcOrigen1";
@@ -285,11 +294,11 @@
             // optImportado1
             // 
             this.optImportado1.AutoSize = true;
-            this.optImportado1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optImportado1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optImportado1.Location = new System.Drawing.Point(16, 58);
             this.optImportado1.Margin = new System.Windows.Forms.Padding(4);
             this.optImportado1.Name = "optImportado1";
-            this.optImportado1.Size = new System.Drawing.Size(102, 24);
+            this.optImportado1.Size = new System.Drawing.Size(112, 26);
             this.optImportado1.TabIndex = 4;
             this.optImportado1.Text = "Importado";
             this.optImportado1.UseVisualStyleBackColor = true;
@@ -298,11 +307,11 @@
             // 
             this.optNacional1.AutoSize = true;
             this.optNacional1.Checked = true;
-            this.optNacional1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optNacional1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optNacional1.Location = new System.Drawing.Point(17, 30);
             this.optNacional1.Margin = new System.Windows.Forms.Padding(4);
             this.optNacional1.Name = "optNacional1";
-            this.optNacional1.Size = new System.Drawing.Size(92, 24);
+            this.optNacional1.Size = new System.Drawing.Size(98, 26);
             this.optNacional1.TabIndex = 3;
             this.optNacional1.TabStop = true;
             this.optNacional1.Text = "Nacional";
@@ -311,11 +320,11 @@
             // lblMarca1
             // 
             this.lblMarca1.AutoSize = true;
-            this.lblMarca1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca1.Location = new System.Drawing.Point(35, 43);
             this.lblMarca1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca1.Name = "lblMarca1";
-            this.lblMarca1.Size = new System.Drawing.Size(59, 20);
+            this.lblMarca1.Size = new System.Drawing.Size(59, 22);
             this.lblMarca1.TabIndex = 0;
             this.lblMarca1.Text = "Marca";
             // 
@@ -323,7 +332,7 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistrar.Enabled = false;
-            this.btnRegistrar.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(763, 75);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
@@ -336,7 +345,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(765, 145);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
@@ -349,7 +358,8 @@
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.Transparent;
-            this.btnConsultar.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.Enabled = false;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(766, 337);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
@@ -359,12 +369,24 @@
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(771, 408);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(104, 47);
+            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmRepuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(905, 609);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrar);
@@ -406,11 +428,12 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.ComboBox cmbMarca;
-        private System.Windows.Forms.ComboBox cmbMarca1;
         private System.Windows.Forms.GroupBox mrcOrigen;
         private System.Windows.Forms.RadioButton optImportado;
         private System.Windows.Forms.RadioButton optNacional;
         private System.Windows.Forms.ListBox lstDatos;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ComboBox cmbMarca1;
     }
 }
 

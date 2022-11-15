@@ -44,16 +44,6 @@ namespace pryEjerResolverSP3
             InitializeComponent();
         }
 
-        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtNmero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNmero_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -156,6 +146,77 @@ namespace pryEjerResolverSP3
                     }
                     intConsulta++;
                 }
+            }
+        }
+
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMarca.SelectedIndex != -1)
+            {
+                lblNumero.Enabled = true;
+                txtNumero.Enabled = true;
+            }
+            else
+            {
+                lblNumero.Enabled = false;
+                txtNumero.Enabled = false;
+            }
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text != "")
+            {
+               lblPrecio.Enabled = true;
+               txtPrecio.Enabled = true;
+            }
+            else
+            {
+                lblPrecio.Enabled= false;
+                txtPrecio.Enabled= false;
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrecio.Text != "")
+            {
+                lblDescripcion.Enabled = true;
+                txtDescripcion.Enabled = true;
+            }
+            else
+            {
+                lblDescripcion.Enabled = false;
+                txtDescripcion.Enabled = false;
+            }
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDescripcion.Text != "")
+            {
+                btnRegistrar.Enabled = true;
+            }
+            else
+            {
+                btnRegistrar.Enabled = false;    
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            lstDatos.Items.Clear();
+        }
+
+        private void cmbMarca1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMarca1.SelectedIndex != -1)
+            {
+                btnConsultar.Enabled = true;
+            }
+            else
+            {
+                btnConsultar.Enabled = false;
             }
         }
     }
