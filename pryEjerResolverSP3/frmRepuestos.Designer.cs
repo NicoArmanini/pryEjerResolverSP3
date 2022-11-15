@@ -43,7 +43,7 @@
             this.lblMarca = new System.Windows.Forms.Label();
             this.mrcRepIngresados = new System.Windows.Forms.GroupBox();
             this.lstDatos = new System.Windows.Forms.ListBox();
-            this.cmbMarca2 = new System.Windows.Forms.ComboBox();
+            this.cmbMarca1 = new System.Windows.Forms.ComboBox();
             this.lblDatos = new System.Windows.Forms.Label();
             this.mrcOrigen1 = new System.Windows.Forms.GroupBox();
             this.optImportado1 = new System.Windows.Forms.RadioButton();
@@ -101,7 +101,7 @@
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(123, 24);
             this.cmbMarca.TabIndex = 9;
-            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
             // lblDescripcion
             // 
@@ -212,7 +212,7 @@
             // mrcRepIngresados
             // 
             this.mrcRepIngresados.Controls.Add(this.lstDatos);
-            this.mrcRepIngresados.Controls.Add(this.cmbMarca2);
+            this.mrcRepIngresados.Controls.Add(this.cmbMarca1);
             this.mrcRepIngresados.Controls.Add(this.lblDatos);
             this.mrcRepIngresados.Controls.Add(this.mrcOrigen1);
             this.mrcRepIngresados.Controls.Add(this.lblMarca1);
@@ -235,20 +235,20 @@
             this.lstDatos.Size = new System.Drawing.Size(406, 204);
             this.lstDatos.TabIndex = 10;
             // 
-            // cmbMarca2
+            // cmbMarca1
             // 
-            this.cmbMarca2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMarca2.FormattingEnabled = true;
-            this.cmbMarca2.Items.AddRange(new object[] {
+            this.cmbMarca1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca1.FormattingEnabled = true;
+            this.cmbMarca1.Items.AddRange(new object[] {
             "Peugeot",
             "Fiat",
             "Renault"});
-            this.cmbMarca2.Location = new System.Drawing.Point(111, 39);
-            this.cmbMarca2.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbMarca2.Name = "cmbMarca2";
-            this.cmbMarca2.Size = new System.Drawing.Size(123, 28);
-            this.cmbMarca2.TabIndex = 9;
-            this.cmbMarca2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbMarca1.Location = new System.Drawing.Point(111, 39);
+            this.cmbMarca1.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbMarca1.Name = "cmbMarca1";
+            this.cmbMarca1.Size = new System.Drawing.Size(123, 28);
+            this.cmbMarca1.TabIndex = 9;
+            this.cmbMarca1.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
             // lblDatos
             // 
@@ -399,7 +399,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.ComboBox cmbMarca;
-        private System.Windows.Forms.ComboBox cmbMarca2;
+        private System.Windows.Forms.ComboBox cmbMarca1;
         private System.Windows.Forms.GroupBox mrcOrigen;
         private System.Windows.Forms.RadioButton optImportado;
         private System.Windows.Forms.RadioButton optNacional;

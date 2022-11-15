@@ -44,9 +44,9 @@ namespace pryEjerResolverSP3
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtNmero_TextChanged(object sender, EventArgs e)
@@ -119,13 +119,13 @@ namespace pryEjerResolverSP3
         {
             lstDatos.Items.Clear();
             intConsulta = 0;
-            if (optNacional.Checked == true)
+            if (optNacional1.Checked == true)
             {
-                lstDatos.Items.Add("Repuestos " + cmbMarca.Text + " Origen Nacional:");
-                lstDatos.Items.Add("─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─");
+                lstDatos.Items.Add("Repuestos " + cmbMarca1.Text + " Origen Nacional:");
+                lstDatos.Items.Add("─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─");
                 while (intConsulta < vecRepuestos.Length)
                 {
-                    if (vecRepuestos[intConsulta].strMarca == cmbMarca.Text)
+                    if (vecRepuestos[intConsulta].strMarca == cmbMarca1.Text)
                     {
                         if (vecRepuestos[intConsulta].strOrigen == "Nacional")
                         {
@@ -140,18 +140,18 @@ namespace pryEjerResolverSP3
             }
             else
             {
-                lstDatos.Items.Add("Repuestos " + cmbMarca.Text + " Origen Importado");
-                lstDatos.Items.Add("─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─");
+                lstDatos.Items.Add("Repuestos " + cmbMarca1.Text + " Origen Importado");
+                lstDatos.Items.Add("────────────────────");
                 while (intConsulta < vecRepuestos.Length)
                 {
-                    if (vecRepuestos[intConsulta].strMarca == cmbMarca.Text)
+                    if (vecRepuestos[intConsulta].strMarca == cmbMarca1.Text)
                     {
                         if (vecRepuestos[intConsulta].strOrigen == "Importado")
                         {
                             lstDatos.Items.Add("Nº de Repuesto: " + vecRepuestos[intConsulta].intNumero);
                             lstDatos.Items.Add("Precio: " + vecRepuestos[intConsulta].floPrecio);
                             lstDatos.Items.Add("Descripción: " + vecRepuestos[intConsulta].strDescripcion);
-                            lstDatos.Items.Add("─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─");
+                            lstDatos.Items.Add("────────────────────");
                         }
                     }
                     intConsulta++;
